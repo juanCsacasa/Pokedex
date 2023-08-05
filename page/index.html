@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/style.css">
+  <title>Pokedex</title>
+</head>
+
+<body>
+  <header>
+    <img src="../img/Pokédex_logo.png" alt="Logo">
+  </header>
+  <main>
+
+    <h1>Pokedex 2K23</h1>
+
+    <form id="poke-form" class="pokeform" action="http://localhost:8000/upload">
+      <div>
+        <label for="Name"></label>
+        <input type="text" name="name" placeholder="Name" required>
+      </div>
+      <div>
+        <label for="type"></label>
+        <input type="text" name="type" placeholder="Type" required>
+      </div>
+
+      <div>
+        <label for="evolution"></label>
+        <input type="text" name="evolution"  placeholder="Evolution" required>
+      </div>
+
+      <div>
+        <label for="generation"></label>
+        <input type="text" name="generation"  placeholder="Generation" required>
+      </div>
+
+      <div>
+        <label for="attack"></label>
+        <input type="text" name="attack" placeholder="Attack" required>
+      </div>
+
+      <div>
+        <input type="submit">
+        <input type="reset">
+      </div>
+
+    </form>
+  </main>
+
+
+  <script src="/src/index.js"></script>
+</body>
+
+</html>
