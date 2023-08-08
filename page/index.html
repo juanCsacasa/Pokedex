@@ -4,23 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="/style/style.css">
   <title>Pokedex</title>
 </head>
 
 <body>
   <header>
-    <img src="../img/Pokédex_logo.png" alt="Logo">
+    <img src="/img/Pokédex_logo.png" alt="Logo">
   </header>
   <main>
-
     <h1>Pokedex 2K23</h1>
-
-    <form id="poke-form" class="pokeform" action="http://localhost:8000/upload">
+    <form id="poke-form" class="pokeform" action="/pokemonregistration" method="post">
       <div>
         <label for="Name"></label>
         <input type="text" name="name" placeholder="Name" required>
       </div>
+
       <div>
         <label for="type"></label>
         <input type="text" name="type" placeholder="Type" required>
@@ -42,15 +41,20 @@
       </div>
 
       <div>
+        <label for="img"></label>
+        <input type="file" name="img" accept="image/*" placeholder="Add img" required> 
+      </div>
+
+      <div>
         <input type="submit">
         <input type="reset">
       </div>
-
     </form>
   </main>
+  <div>
+    <ul id="pokemon-list"></ul>
+  </div>
 
-
-  <script src="/src/index.js"></script>
+<script src="/src/index.js"></script>
 </body>
-
 </html>

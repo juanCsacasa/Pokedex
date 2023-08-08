@@ -1,2 +1,4 @@
 # Pokedex
  
+
+ inicar- npm start. 
