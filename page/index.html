@@ -12,9 +12,17 @@
   <header>
     <img src="/img/Pokédex_logo.png" alt="Logo">
   </header>
-  <main>
+
+  <form id="search-form" action="/pokemonsearc">
+    <label for="searchTerm">Search Term:</label>
+    <input type="text" id="searchTerm" name="searchTerm" required>
+    <button class="btnpokemon" type="submit">Search</button>
+  </form>
+  <div id="search-results"></div>  
+  <!-- -------------- -->
+  <div class="content-pokemon">
     <h1>Pokedex 2K23</h1>
-    <form id="poke-form" class="pokeform" action="/pokemonregistration" method="post">
+    <form id="poke-form" class="pokeform" action="/pokemonregistration" method="post" enctype="multipart/form-data">
       <div>
         <label for="Name"></label>
         <input type="text" name="name" placeholder="Name" required>
@@ -27,12 +35,12 @@
 
       <div>
         <label for="evolution"></label>
-        <input type="text" name="evolution"  placeholder="Evolution" required>
+        <input type="text" name="evolution" placeholder="Evolution" required>
       </div>
 
       <div>
         <label for="generation"></label>
-        <input type="text" name="generation"  placeholder="Generation" required>
+        <input type="text" name="generation" placeholder="Generation" required>
       </div>
 
       <div>
@@ -41,20 +49,34 @@
       </div>
 
       <div>
+        <label for="weakness"></label>
+        <input type="text" name="weakness" placeholder="Weakness" required>
+      </div>
+
+      <div>
+        <label for="pokedex_number"></label>
+        <input type="text" name="pokedex_number" placeholder="Pokedex Number" required>
+      </div>
+
+      <div>
         <label for="img"></label>
-        <input type="file" name="img" accept="image/*" placeholder="Add img" required> 
+        <input type="file" name="images" accept="image/*" placeholder="Add img" required>
       </div>
 
       <div>
         <input type="submit">
         <input type="reset">
       </div>
+
     </form>
-  </main>
-  <div>
-    <ul id="pokemon-list"></ul>
   </div>
 
-<script src="/src/index.js"></script>
+
+  <main>
+    <ul id="pokemon-list" class="poke-cards"></ul>
+  </main>
+
+  <script src="/src/index.js"></script>
 </body>
+
 </html>
