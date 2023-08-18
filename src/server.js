@@ -107,5 +107,5 @@ app.use((req, res) => {
   res.status(404).send('Not found');
 });
 app.listen(port, () => {
-  console.log(`La aplicación está escuchando en http://localhost:${port}`);
+  console.log(`La aplicación está escuchando en http://localhost:${port}/pokemonregistration`);
 });
